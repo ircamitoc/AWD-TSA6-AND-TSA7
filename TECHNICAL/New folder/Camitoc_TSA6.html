@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".login").hide();
+            $(".register_li").addClass("active");
+
+            $(".login_li").click(function () {
+                $(this).addClass("active");
+                $(".register_li").removeClass("active");
+                $(".login").show();
+                $(".register").hide();
+            });
+
+            $(".register_li").click(function () {
+                $(this).addClass("active");
+                $(".login_li").removeClass("active");
+                $(".login").hide();
+                $(".register").show();
+            });
+
+        });
+    </script>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            text-decoration: none;
+            list-style: none;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body {
+            background: #DFDFDF;
+        }
+
+        .wrapper {
+            display: flex;
+            max-width: 560px;
+            width: 100%;
+            height: 350px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .wrapper .left,
+        .wrapper .right {
+            width: 50%;
+            height: 100%;
+            padding: 30px;
+        }
+
+        .wrapper .left {
+            background: #494F57;
+        }
+
+        .wrapper .left h3 {
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 3px;
+            color: #FFF;
+            font-size: 20px;
+        }
+
+        .wrapper .left img {
+            display: block;
+            width: 220px;
+            margin: 25px auto 0;
+        }
+
+        .wrapper .right {
+            background: #FFF;
+        }
+
+        .wrapper .right .tabs ul {
+            text-align: center;
+        }
+
+        .wrapper .right .tabs ul li {
+            display: inline-block;
+            margin: 2px;
+            padding: 5px 10px;
+            font-size: 14px;
+            color: #494F57;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+
+        .wrapper .right .tabs ul li.active {
+            border-bottom: 2px solid #494F57;
+        }
+
+        .wrapper .right .register,
+        .wrapper .right .login {
+            margin-top: 20px;
+        }
+
+        .wrapper .right .input_field {
+            margin-bottom: 15px;
+        }
+
+        .wrapper .right .input_field .input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 0;
+            font-size: 12px;
+            background: #ECEBEB;
+        }
+
+        .wrapper .right .btn {
+            margin-top: 10px;
+            background: #494F57;
+            padding: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .wrapper .right .btn a {
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function passValue() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("pass").value;
+            var confirm_pass = document.getElementById("confirm_pass").value;
+            localStorage.setItem("textvalue1", name);
+            localStorage.setItem("textvalue2", email);
+            localStorage.setItem("type", pass);
+            localStorage.setItem("type2", confirm_pass);
+            return false;
+        }
+    </script>
+    <div class="wrapper">
+        <div class="left">
+            <h3>Music Store</h3>
+            <img src="https://www.svgrepo.com/show/187134/piano.svg" alt="Music_img">
+        </div>
+        <div class="right">
+            <div class="tabs">
+                <ul>
+                    <li class="register_li">Register</li>
+                    <li class="login_li">Login</li>
+                </ul>
+            </div>
+            <form action="display.html" method="get">
+                <div class="register">
+                    <div class="input_field">
+                        <input type="text" id="name" placeholder="Complete Name" class="input">
+                    </div>
+                    <div class="input_field">
+                        <input type="text" id="email" placeholder="Email" class="input">
+                    </div>
+                    <div class="input_field">
+                        <input type="password" id="pass" placeholder="Password" class="input">
+                    </div>
+                    <div class="input_field">
+                        <input type="password" id="confirm_pass" placeholder="Confirm Password" class="input">
+                    </div>
+                    <div class="btn"><a href="display.html" onclick="passValue()">Register</a></div>
+                </div>
+            </form>
+            <div class="login">
+                <div class="input_field">
+                    <input type="text" placeholder="Email" class="input">
+                </div>
+                <div class="input_field">
+                    <input type="password" placeholder="Password" class="input">
+                </div>
+                <div class="btn"><a href="#">Login</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

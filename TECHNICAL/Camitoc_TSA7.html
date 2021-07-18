@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- Import bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+
+    <!-- Import jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 70px;
+            background-color: #282828;
+        }
+
+        .navbar header h1 {
+            position: absolute;
+            padding: 3px;
+            float: left;
+            margin-left: 2%;
+            top: 5px;
+            font-family: 'Open Sans', sans-serif;
+            color: #39ca74;
+            font-weight: bolder;
+        }
+
+        .navbar header span {
+            font-family: 'Open Sans', sans-serif;
+            color: #FFF;
+        }
+
+        /* PRODUCT SECTION */
+
+        .card {
+            display: flex;
+            padding: 30px 25px;
+            margin: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+
+        .card-img-top:hover {
+            transform: scale(1.1);
+        }
+
+        /* ORDER FORM SECTION */
+
+        .order-form {
+            margin-top: 70px;
+            margin-left: 420px;
+            border: 2px solid black;
+            width: 500px;
+        }
+
+        .order-form header {
+            width: 100%;
+            height: 70px;
+            background-color: #282828;
+            color: #39ca74;
+        }
+
+        .order-container {
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .order-container #sum {
+            border-style: none;
+            background: #39ca74;
+            text-align: center;
+            color: #000;
+            font-size: 25px;
+            width: 10%;
+            margin-left: 220px;
+        }
+
+        .order-container #total {
+            margin-left: 200px;
+        }
+
+        .order-container input {
+            width: 100px;
+        }
+
+        /* CUSTOMER FORM SECTION */
+
+        .customer-form {
+            margin: 50px auto;
+            border: 2px solid black;
+        }
+
+        .c-form {
+            width: 100%;
+            height: 70px;
+            background-color: #282828;
+            color: #39ca74;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Start of Navbar-->
+    <div class="navbar">
+        <header>
+            <h1>MUSIC<span>|SHOP</span></h1>
+        </header>
+    </div>
+    <!--End of Navbar-->
+    <!--Start of Products-->
+    <div class="row">
+        <div class="card" style="width: 18rem; height: 27rem; border-radius: 30px;">
+            <img src="https://is2-ssl.mzstatic.com/image/thumb/Music114/v4/94/e4/2c/94e42ca2-1bd9-5c9b-3bcb-f860a7eecfc6/source/1200x1200bb-60.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">Djesse Vol. 3</h3>
+                <p class="card-text">Jacob Collier</p>
+                <p class="card-text">&#8369;450</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem; height: 27rem; border-radius: 30px;">
+            <img src="https://static.wikia.nocookie.net/loonatheworld/images/2/29/%26_album_cover_A.png/revision/latest/scale-to-width-down/1000?cb=20210628184221"
+                class="card-img-top" alt="LOONA">
+            <div class="card-body">
+                <h3 class="card-title">[&]</h3>
+                <p class="card-text">LOONA</p>
+                <p class="card-text">&#8369;790</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem; height: 27rem; border-radius: 30px;">
+            <img src="https://static.wikia.nocookie.net/jpop/images/6/63/Forced_Shutdown_Cover.jpg/revision/latest/scale-to-width-down/500?cb=20210518145519"
+                class="card-img-top" alt="Tomori">
+            <div class="card-body">
+                <h3 class="card-title">Forced Shutdown</h3>
+                <p class="card-text">Kusunoki Tomori</p>
+                <p class="card-text">&#8369;678</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem; height: 27rem; border-radius: 30px;">
+            <img src="https://i.scdn.co/image/ab67616d0000b27363f1eefdc1c8765de0098280" class="card-img-top" alt="RAS">
+            <div class="card-body">
+                <h3 class="card-title">ERA</h3>
+                <p class="card-text">RAISE A SUILEN</p>
+                <p class="card-text">&#8369;1449</p>
+            </div>
+        </div>
+    </div>
+    <!--End of Products-->
+    <!--Start of Order Form-->
+    <div class="order-form">
+        <header>
+            <h1>Order Form</h1>
+        </header>
+        <div class="order-container">
+            <h3>Select an album:</h3>
+            <input type="input" name="sum" id="sum" class="form-control" readonly />
+        </div>
+        <div class="order-container">
+            <label>Djesse Vol. 3 - Jacob Collier:</label>
+            <input type="number" id="djesse" value="0" min="0" max="100" step="1" />
+        </div>
+        <div class="order-container">
+            <label>[&] - Loona:</label>
+            <input type="number" id="ptt" value="0" min="0" max="100" step="1" />
+        </div>
+        <div class="order-container">
+            <label>Forced Shutdown - Kusunoki Tomori:</label>
+            <input type="number" id="force_shut" value="0" min="0" max="100" step="1" />
+        </div>
+        <div class="order-container">
+            <label>ERA - RAISE A SUILEN:</label>
+            <input type="number" id="era" value="0" min="0" max="100" step="1" />
+        </div>
+        <div class="order-container">
+            <label>Total Bill (&#8369;):</label>
+            <input type="input" name="total" id="total" placeholder="&#8369;0" class="form-control" readonly />
+        </div>
+        <div class="order-container">
+            <label>Cash (&#8369;):</label>
+            <input type="number" id="payment" value="0" min="0" max="1000000" step="1" />
+        </div>
+    </div>
+    <!--End of Order Form-->
+    <!--Start of Customer Form-->
+    <div class="customer-form" style="width: 50%">
+        <header class="c-form">
+            <h1>Customer Form</h1>
+        </header>
+        <div class="container mt-2">
+
+            <!-- Input field to accept user input -->
+            Name: <input type="text" name="name" id="name"><br><br>
+
+            Address: <input type="text" name="address" id="address"><br><br>
+
+            Contact No.: <input type="text" name="cpno" id="cpno"><br><br>
+            <!-- Button to invoke the modal -->
+            <button type="button" class="btn btn-primary
+                btn-sm" data-toggle="modal" data-target="#exampleModal" id="submit">
+                Submit
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Confirmation
+                            </h5>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">
+                                    ×
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <h6 id="modal_body1"></h6>
+                            <h6 id="modal_body2"></h6>
+                            <h6 id="modal_body3"></h6>
+                            <h6 id="modal_body4"></h6>
+                            <h6 id="modal_body5"></h6>
+                            <h6 id="modal_body6"></h6>
+                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal"
+                                data-target="#exampleModal" id="submit">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#djesse, #ptt, #force_shut, #era, #payment').on("input", function () {
+                var value1 = parseFloat($('#djesse').val()) || 0;
+                var value2 = parseFloat($('#ptt').val()) || 0;
+                var value3 = parseFloat($('#force_shut').val()) || 0;
+                var value4 = parseFloat($('#era').val()) || 0;
+                var value5 = parseFloat($('#payment').val()) || 0;
+                $('#sum').val(value1 + value2 + value3 + value4);
+                $('#total').val((value1 * 450) + (value2 * 790) + (value3 * 678) + (value4 * 1449));
+            });
+        });
+
+        $("#submit").click(function () {
+            var name = $("#name").val();
+            var address = $("#address").val();
+            var cpno = $("#cpno").val();
+            var total = $("#total").val()
+            var pay = $("#payment").val()
+
+            var str = "Name: " + name;
+            var str2 = "Address: " + address;
+            var str3 = "Contact No: " + cpno;
+            var str4 = "Total Bill: " + "&#8369;" + total;
+            var str5 = "Payment: " + "&#8369;" + pay;
+            var str6 = "Change: " + "&#8369;" + (pay - total);
+
+            $("#modal_body1").html(str);
+            $("#modal_body2").html(str2);
+            $("#modal_body3").html(str3);
+            $("#modal_body4").html(str4);
+            $("#modal_body5").html(str5);
+            $("#modal_body6").html(str6);
+        });
+    </script>
+</body>
+
+</html>
